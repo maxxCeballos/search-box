@@ -32,9 +32,9 @@ let testData = [
 // });
 
 
-const lala = Observable.from(fetch('http://localhost:3000/'))
+// const lala = Observable.from(fetch('http://localhost:3000/'))
    
-lala.subscribe(data => console.log('la data de fetch ', data));
+// lala.subscribe(data => console.log('la data de fetch ', data));
 
 
 // fetch('http://localhost:3000/')
