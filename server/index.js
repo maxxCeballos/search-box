@@ -12,8 +12,9 @@ let allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 
 
-app.get('/', (req, res) => {
-    
+app.get('/', async (req, res) => {
+    console.log(' en el server ', req.query.consulta);
+
     let testData = [
         'github.com/Reactive-Extensions/RxJS',
         'github.com/ReactiveX/RxJS',
@@ -24,7 +25,11 @@ app.get('/', (req, res) => {
         'https://www.manning.com/books/rxjs-in-action'
     ];
 
-    res.send(testData);
+    let result = await testData.filter( element => element.includes(req.query.consulta) ? element : '')
+
+    console.log('sale con ', result)
+
+    res.send(result);
 
 })
 
