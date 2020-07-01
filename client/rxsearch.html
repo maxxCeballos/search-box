@@ -2,22 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Programación reactiva</title>
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="rxsearch.css">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
 </head>
 <body>
-    <div>
-        <div>
-        <span>Buscador</span>
-        <input id= "search">
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div>
+                <h1>Buscador</h1>
+            </div>
+            <div class="menu" id="show-menu">
+
+                
+            </div>
+
+            <div id="ctn-icon-search">
+                <i class="fas fa-search" id="icon-search"></i>
+            </div>
+
         </div>
-        <div>
-        <span>Resultados</span>
-        <ul id= "results"></ul>
+
+        <div id="icon-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </header>
+
+
+    <div id="ctn-bars-search">
+        <input type="text" id="search" placeholder="¿Qué deseas buscar?">
+    </div>
+
+    <ul id="results"> 
+        
+    </ul>
+
+    <div id="cover-ctn-search"></div>
+
+    <div class="container-all" id="move-content">
+
+    
+        <div class="blog-container-cover">
+            <div class="container-info-cover">
+                <h1>Buscador sobre ...</h1>
+                <p>Algunos ejemplos...</p>
+            </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.5/rxjs.umd.min.js"></script>
-    <script type="text/javascript" src="rxsearch.js"></script>
+    <div class="container-footer">	
+
+        <footer>
+            <div class="redes-footer">
+                <a href="#"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
+                <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+            </div>
+
+            <hr>
+            <h4>Saddi Nahir - Ceballos Maxi</h4>
+
+        </footer>
+
+    </div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.5/rxjs.umd.min.js"></script>
+<script type="text/javascript" src="rxsearch.js"></script>
 
 </body>
 </html>
