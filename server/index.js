@@ -13,7 +13,6 @@ app.use(allowCrossDomain);
 
 
 app.get('/', async (req, res) => {
-    console.log(' en el server ', req.query.consulta);
 
     let testData = [
         'github.com/Reactive-Extensions/RxJS',
@@ -26,8 +25,6 @@ app.get('/', async (req, res) => {
     ];
 
     let result = await testData.filter( element => element.includes(req.query.consulta) ? element : '')
-
-    console.log('sale con ', result)
 
     res.send(result);
 

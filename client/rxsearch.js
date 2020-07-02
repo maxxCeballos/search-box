@@ -22,18 +22,23 @@ function mostrar_buscador(){
     bars_search.style.top = "80px";
     cover_ctn_search.style.display = "block";
 
-    searchBox.addEventListener('keyup', function (event) {
+    rxjs.fromEvent(document, 'keyup').subscribe( event => {
+
         let query = event.target.value;
         let searchResults = [];
-        if(query && query.length > 0) {
+        if(query && query.length > 0 && !query.includes(' ')) {
             
+            // Codigo Asincrono, hace la llamada http y el codigo se sigue ejecutando, no se bloquea
             responseServer = rxjs.from(fetch(`http://localhost:3000/?consulta=${query}`)
             .then(function(response) {
                 return response.json();
             }))
 
+            // continua ejecutando el codigo
             clearResults(results);
+            //mucho codigo que se va ejecutando mientras espera la devolucion de la llamada http.
 
+            // nos suscribimos a la respuesta de la solicitud http, cuando llegue se va a ejecutar este codigo
             responseServer.subscribe( resultado => {
 
                 for(let result of resultado) {
