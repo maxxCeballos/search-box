@@ -34,9 +34,7 @@ function mostrar_buscador(){
                 return response.json();
             }))
 
-            // continua ejecutando el codigo
-            clearResults(results);
-            //mucho codigo que se va ejecutando mientras espera la devolucion de la llamada http.
+            //aca puede ir código que se va ejecutando mientras espera la devolucion de la llamada http.
 
             // nos suscribimos a la respuesta de la solicitud http, cuando llegue se va a ejecutar este codigo
             responseServer.subscribe( resultado => {
@@ -50,6 +48,8 @@ function mostrar_buscador(){
                 }
             });
         }
+
+        clearResults(results);
 
         if (searchBox.value === ""){
             results.style.display = "none";

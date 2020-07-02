@@ -14,7 +14,7 @@ app.use(allowCrossDomain);
 
 app.get('/', async (req, res) => {
 
-    let testData = [
+    let sourceData = [
         'Symfony 4',
         'Laravel',
         'CakePHP',
@@ -33,7 +33,7 @@ app.get('/', async (req, res) => {
         'ionic' 
     ];
 
-    let result = await testData.filter( element => element.includes(req.query.consulta) ? element : '')
+    let result = await sourceData.filter( element => element.includes(req.query.consulta) ? element : '')
 
     res.send(result);
 
