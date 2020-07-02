@@ -15,13 +15,22 @@ app.use(allowCrossDomain);
 app.get('/', async (req, res) => {
 
     let testData = [
-        'github.com/Reactive-Extensions/RxJS',
-        'github.com/ReactiveX/RxJS',
-        'xgrommx.github.io/rx-book',
-        'reactivex.io',
-        'egghead.io/technologies/rx',
-        'rxmarbles.com',
-        'https://www.manning.com/books/rxjs-in-action'
+        'Symfony 4',
+        'Laravel',
+        'CakePHP',
+        'CodeIgniter',
+        'Zend',
+        'Phalcon',
+        'Yii',
+        'FuelPHP',
+        'TurboGears',
+        'Catalyst',
+        'Pylons',
+        'Django',
+        'Kohana',
+        'Angular.js',
+        'react',
+        'ionic' 
     ];
 
     let result = await testData.filter( element => element.includes(req.query.consulta) ? element : '')
